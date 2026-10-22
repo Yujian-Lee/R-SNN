@@ -2,13 +2,21 @@
 
 **Learning When to Correct via Complementarity-Aware Expert Routing for Spiking Vision Transformers**
 
-[Training and evaluation](docs/TRAINING.md) · [Data and checkpoints](docs/DATA_AND_CHECKPOINTS.md) · [Acknowledgments](THIRD_PARTY.md)
+[中文说明](README.zh-CN.md) · [Training and evaluation](docs/TRAINING.md) · [Data and checkpoints](docs/DATA_AND_CHECKPOINTS.md) · [Acknowledgments](THIRD_PARTY.md)
 
 R-SNN reuses complementary spiking vision experts through a **Temporal-Correction Trigger (TCT)** and **hard Expert Routing (ER)**. Max-Former and QKFormer capture different cues; R-SNN learns when temporal correction is useful and which expert's prediction to select for each sample.
 
-This source release includes implementations for **CIFAR-10, CIFAR-100, ImageNet-1K, CIFAR10-DVS, and DVS128-Gesture**. Datasets, pretrained weights, training outputs, cached logits, and visualizations are not bundled.
+![R-SNN teaser](assets/teaser.png)
+
+*Teaser from the paper.* [View the original PDF](assets/teaser.pdf).
+
+This source release includes implementations for **CIFAR-10, CIFAR-100, ImageNet-1K, CIFAR10-DVS, and DVS128-Gesture**, together with the paper's teaser and framework figures. Datasets, pretrained weights, training outputs, cached logits, and generated experiment visualizations are not bundled.
 
 ## Method
+
+![R-SNN framework with temporal correction and expert routing](assets/mainframe.png)
+
+*R-SNN framework: temporal correction and expert routing.* [View the original PDF](assets/mainframe.pdf).
 
 1. **Complementary experts.** Max-Former and QKFormer provide distinct spatial and spectral inductive biases. Their temporal variants are denoted **Max-T** and **QK-T**.
 2. **Temporal-Correction Trigger.** Adjacent-step spike differences are processed by a depthwise temporal convolution. A learned hard gate controls a residual correction using temporal evidence and training-time supervision.
@@ -47,6 +55,7 @@ R-SNN/
 │   └── imagenet/
 ├── tnnls_experiments/     # Export logits; compare routers and budgets
 ├── scripts/              # Release checks and exported-logit evaluation
+├── assets/               # Paper teaser and framework: PNG previews + original PDFs
 ├── docs/
 ├── requirements.txt
 └── .gitignore
@@ -147,11 +156,11 @@ Budgeted outputs are offline simulations using cached predictions. The default `
 python scripts/check_release.py
 ```
 
-This validates Python syntax, YAML syntax, external model-file references, and the absence of excluded data/weight/visualization artifacts. It does not execute model inference or training.
+This validates Python syntax, YAML syntax, external model-file references, and the absence of excluded data, weights, and experiment artifacts. The two paper figures in `assets/` are explicitly allowed. It does not execute model inference or training.
 
 The release preserves the supplied model implementations and experiment schedules, while making paths portable and setting the default ImageNet QK route to the included QKFormer. Use the exact configuration, checkpoint, seed, split, and software environment associated with an experiment when reproducing its reported result. No GPU training or benchmark-accuracy reproduction has been performed as part of packaging this release.
 
-Only source, configurations, and documentation are included. Old experiments, unrelated projects, duplicate baseline trees, editor state, virtual environments, generated tables/figures, and Git history are excluded. Git ignore rules also protect future local experiment artifacts from accidental staging.
+Source, configurations, documentation, and the two supplied paper figures are included. Each figure has a high-resolution PNG for inline display and its unchanged original PDF. Old experiments, unrelated projects, duplicate baseline trees, editor state, virtual environments, generated experiment tables/figures, the full manuscript PDF, and Git history are excluded. Git ignore rules allow the four selected figure files and protect future local experiment artifacts from accidental staging.
 
 ## Acknowledgments and citation
 
