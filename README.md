@@ -150,17 +150,6 @@ For event datasets, use `export_event_logits.py` with `--dataset cifar10dvs` or 
 
 Budgeted outputs are offline simulations using cached predictions. The default `--energy-max 1.0 --energy-qk 1.0` represents normalized expert cost, not measured millijoules or end-to-end latency. Test labels are used for evaluation and the oracle upper bound, not as inputs to deployed routing.
 
-## Reproducibility and release scope
-
-```bash
-python scripts/check_release.py
-```
-
-This validates Python syntax, YAML syntax, external model-file references, and the absence of excluded data, weights, and experiment artifacts. The two paper figures in `assets/` are explicitly allowed. It does not execute model inference or training.
-
-The release preserves the supplied model implementations and experiment schedules, while making paths portable and setting the default ImageNet QK route to the included QKFormer. Use the exact configuration, checkpoint, seed, split, and software environment associated with an experiment when reproducing its reported result. No GPU training or benchmark-accuracy reproduction has been performed as part of packaging this release.
-
-Source, configurations, documentation, and the two supplied paper figures are included. Each figure has a high-resolution PNG for inline display and its unchanged original PDF. Old experiments, unrelated projects, duplicate baseline trees, editor state, virtual environments, generated experiment tables/figures, the full manuscript PDF, and Git history are excluded. Git ignore rules allow the four selected figure files and protect future local experiment artifacts from accidental staging.
 
 ## Acknowledgments and citation
 
