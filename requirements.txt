@@ -1,0 +1,15 @@
+# Research dependencies from the supplied source; this is not an environment lock.
+# Install CUDA-compatible PyTorch/torchvision and CuPy separately first.
+timm==0.6.12
+spikingjelly==0.0.0.0.12
+numpy<2.0
+PyYAML>=6.0
+Pillow>=9.2
+einops==0.7.0
+opencv-python==4.8.1.78
+matplotlib
+tensorboard
+torchinfo
+tqdm
+six
+
