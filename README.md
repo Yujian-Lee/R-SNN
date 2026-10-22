@@ -2,7 +2,7 @@
 
 **Learning When to Correct via Complementarity-Aware Expert Routing for Spiking Vision Transformers**
 
-[中文说明](README.zh-CN.md) · [Training and evaluation](docs/TRAINING.md) · [Data and checkpoints](docs/DATA_AND_CHECKPOINTS.md) · [Acknowledgments](THIRD_PARTY.md)
+[Training and evaluation](docs/TRAINING.md) · [Data and checkpoints](docs/DATA_AND_CHECKPOINTS.md) · [Acknowledgments](THIRD_PARTY.md)
 
 R-SNN reuses complementary spiking vision experts through a **Temporal-Correction Trigger (TCT)** and **hard Expert Routing (ER)**. Max-Former and QKFormer capture different cues; R-SNN learns when temporal correction is useful and which expert's prediction to select for each sample.
 
