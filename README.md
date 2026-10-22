@@ -155,5 +155,5 @@ Budgeted outputs are offline simulations using cached predictions. The default `
 
 This work builds on [Max-Former](https://github.com/bic-L/MaxFormer), [QKFormer](https://github.com/zhouchenlin2096/QKFormer), SpikingJelly, and timm. Upstream attribution headers are retained; see [third-party notes](THIRD_PARTY.md).
 
-Paper title: **R-SNN: Learning When to Correct via Complementarity-Aware Expert Routing for Spiking Vision Transformers**. Public paper links and finalized citation metadata can be added when available; this release does not assign unconfirmed authors, publication status, or a DOI.
+Paper title: **R-SNN: Learning When to Correct via Complementarity-Aware Expert Routing for Spiking Vision Transformers**. Public paper links and finalized citation metadata will be added when available.
 
