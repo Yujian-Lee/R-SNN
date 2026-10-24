@@ -1,6 +1,7 @@
-# R-SNN
+# R-SNN 
 
 **Learning When to Correct via Complementarity-Aware Expert Routing for Spiking Vision Transformers**
+(code will be uploaded upon acceptance)
 
 [Training and evaluation](docs/TRAINING.md) · [Data and checkpoints](docs/DATA_AND_CHECKPOINTS.md) · [Acknowledgments](THIRD_PARTY.md)
 
