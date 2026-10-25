@@ -28,6 +28,7 @@ This source release includes implementations for **CIFAR-10, CIFAR-100, ImageNet
 ## Reported results
 
 The following **ER2 (Max-T + QK-T)** top-1 accuracies are reported in Table II of the accompanying R-SNN manuscript. They are reference results, not measurements produced by the source-packaging checks.
+(The results are based on the selected experts, run the corresponding expert first)
 
 | Dataset | Timesteps | Top-1 accuracy (%) |
 |---|---:|---:|
