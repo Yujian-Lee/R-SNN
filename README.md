@@ -5,7 +5,7 @@
 
 [Training and evaluation](docs/TRAINING.md) · [Data and checkpoints](docs/DATA_AND_CHECKPOINTS.md) · [Acknowledgments](THIRD_PARTY.md)
 
-R-SNN reuses complementary spiking vision experts through a **Temporal-Correction Trigger (TCT)** and **hard Expert Routing (ER)**. Max-Former and QKFormer capture different cues; R-SNN learns when temporal correction is useful and which expert's prediction to select for each sample.
+R-SNN reuses complementary spiking vision experts through a **Temporal-Correction Trigger (TCT)** and **hard Expert Routing (ER)**. Max-Former and QKFormer capture different cues, sensitive to sepcific frequency; R-SNN learns when temporal correction is useful and which expert's prediction to select for each sample.
 
 ![R-SNN teaser](assets/teaser.png)
 
